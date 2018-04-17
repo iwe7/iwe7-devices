@@ -1,20 +1,34 @@
-
 ### 各种设备屏幕
-> diy预览必备
+
+> diy 预览必备
 
 ![各种设备屏幕](./assets/002.gif)
 
-- install
+* install
+
 ```ts
 yarn add iwe7-devices
 ```
 
 ```ts
 import { DevicesModule } from "iwe7-devices";
+// 组件库module
 @NgModule({
-  imports: [eDevicesModule]
+  imports: [DevicesModule]
+})
+export class TestDevicesModule {}
+```
+
+```ts
+// 组件库懒加载
+import { DevicesLazyModule, DevicesComponent } from "iwe7-devices";
+@NgModule({
+  imports: [DevicesLazyModule]
 })
 export class TestDevicesModule {
+  get(key) {
+    return DevicesComponent;
+  }
 }
 ```
 
@@ -91,5 +105,7 @@ export class TestDevicesModule {
 </device-s5>
 ```
 
+```ts
+```
 
-- [git项目地址](https://github.com/iwe7/iwe7-devices)
+* [git 项目地址](https://github.com/iwe7/iwe7-devices)

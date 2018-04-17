@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { DevicesModule } from "./devices.module";
+
 import { DevicesComponent } from "./devices.component";
 import { DeviceNote8Component } from "./device-note8/device-note8.component";
 import { DeviceIphonexComponent } from "./device-iphonex/device-iphonex.component";
@@ -16,24 +17,9 @@ import { DeviceIphone8plusComponent } from "./device-iphone8plus/device-iphone8p
 import { DeviceIphone8Component } from "./device-iphone8/device-iphone8.component";
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [
-    DevicesComponent,
-    DeviceNote8Component,
-    DeviceIphonexComponent,
-    DeviceMacbookComponent,
-    DeviceIpadComponent,
-    DeviceHtcOneComponent,
-    DeviceLumia920Component,
-    DeviceS5Component,
-    DeviceNexus5Component,
-    DeviceIphone4sComponent,
-    DeviceIphone5cComponent,
-    DeviceIphone5sComponent,
-    DeviceIphone8plusComponent,
-    DeviceIphone8Component
-  ],
-  exports: [
+  imports: [DevicesModule],
+  exports: [DevicesModule],
+  entryComponents: [
     DevicesComponent,
     DeviceNote8Component,
     DeviceIphonexComponent,
@@ -50,4 +36,4 @@ import { DeviceIphone8Component } from "./device-iphone8/device-iphone8.componen
     DeviceIphone8Component
   ]
 })
-export class DevicesModule {}
+export class DevicesLazyModule {}

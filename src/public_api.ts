@@ -2,7 +2,7 @@
  * Public API Surface of iwe7-devices
  */
 export { DevicesModule } from "./lib/devices.module";
-
+export { DevicesLazyModule } from './lib/devices.lazy.module';
 export { DevicesComponent } from "./lib/devices.component";
 export {
   DeviceNote8Component
