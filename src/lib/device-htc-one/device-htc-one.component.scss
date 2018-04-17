@@ -1,0 +1,205 @@
+.marvel-device {
+    &.htc-one {
+        padding: 72px 25px 100px 25px;
+        width: 320px;
+        height: 568px;
+        background: #bebebe;
+        border-radius: 34px;
+        &:before {
+            content: '';
+            display: block;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            background: #adadad;
+            border-radius: 32px;
+        }
+        &:after {
+            content: '';
+            display: block;
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            background: #eeeeee;
+            border-radius: 30px;
+        }
+        .top-bar {
+            width: calc(100% - 4px);
+            height: 635px;
+            position: absolute;
+            background: #424242;
+            top: 50px;
+            z-index: 1;
+            left: 2px;
+            &:before {
+                content: '';
+                position: absolute;
+                width: calc(100% - 4px);
+                height: 100%;
+                position: absolute;
+                background: black;
+                top: 0px;
+                z-index: 1;
+                left: 2px;
+            }
+        }
+        .bottom-bar {
+            display: none;
+        }
+        .speaker {
+            height: 16px;
+            width: 216px;
+            display: block;
+            position: absolute;
+            top: 22px;
+            z-index: 2;
+            left: 50%;
+            margin-left: -108px;
+            background: radial-gradient(#343434 25%, transparent 50%) 0 0, radial-gradient(#343434 25%, transparent 50%) 4px 4px;
+            background-size: 4px 4px;
+            background-position: top left;
+            &:after {
+                content: '';
+                height: 16px;
+                width: 216px;
+                display: block;
+                position: absolute;
+                top: 676px;
+                z-index: 2;
+                left: 50%;
+                margin-left: -108px;
+                background: inherit;
+            }
+        }
+        .camera {
+            display: block;
+            position: absolute;
+            top: 18px;
+            right: 38px;
+            background: #3c3d3d;
+            border-radius: 100%;
+            width: 24px;
+            height: 24px;
+            z-index: 3;
+            &:before {
+                width: 8px;
+                height: 8px;
+                background: black;
+                border-radius: 100%;
+                position: absolute;
+                content: '';
+                top: 50%;
+                left: 50%;
+                margin-top: -4px;
+                margin-left: -4px;
+            }
+        }
+        .sensor {
+            display: block;
+            position: absolute;
+            top: 29px;
+            left: 60px;
+            background: #3c3d3d;
+            border-radius: 100%;
+            width: 8px;
+            height: 8px;
+            z-index: 3;
+            &:after {
+                display: block;
+                content: '';
+                position: absolute;
+                top: 0px;
+                right: 12px;
+                background: #3c3d3d;
+                border-radius: 100%;
+                width: 8px;
+                height: 8px;
+                z-index: 3;
+            }
+        }
+        &.landscape {
+            padding: 25px 72px 25px 100px;
+            height: 320px;
+            width: 568px;
+            .top-bar {
+                height: calc(100% - 4px);
+                width: 635px;
+                left: calc(100% - 685px);
+                top: 2px;
+            }
+            .speaker {
+                width: 16px;
+                height: 216px;
+                left: calc(100% - 38px);
+                top: 50%;
+                margin-left: 0px;
+                margin-top: -108px;
+                &:after {
+                    width: 16px;
+                    height: 216px;
+                    left: calc(100% - 692px);
+                    top: 50%;
+                    margin-left: 0;
+                    margin-top: -108px;
+                }
+            }
+            .camera {
+                right: 18px;
+                top: calc(100% - 38px);
+            }
+            .sensor {
+                left: calc(100% - 29px);
+                top: 60px;
+                :after {
+                    right: 0;
+                    top: -12px;
+                }
+            }
+        }
+    }
+}
+
+
+.marvel-device {
+  display: inline-block;
+  position: relative;
+  box-sizing: content-box !important;
+  .screen {
+      width: 100%;
+      position: relative;
+      height: 100%;
+      z-index: 3;
+      background: white;
+      overflow: hidden;
+      display: block;
+      border-radius: 1px;
+      box-shadow: 0 0 0 3px #111;
+      .screen-content {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          bottom: 0px;
+          right: 0px;
+          overflow: auto;
+      }
+  }
+  .top-bar,
+  .bottom-bar {
+      height: 3px;
+      background: black;
+      width: 100%;
+      display: block;
+  }
+  .middle-bar {
+      width: 3px;
+      height: 4px;
+      top: 0px;
+      left: 90px;
+      background: black;
+      position: absolute;
+  }
+}

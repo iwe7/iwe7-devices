@@ -1,0 +1,182 @@
+.marvel-device {
+    &.lumia920 {
+        padding: 80px 35px 125px 35px;
+        background: #ffdd00;
+        width: 320px;
+        height: 533px;
+        border-radius: 40px / 3px;
+        .bottom-bar {
+            display: none;
+        }
+        .top-bar {
+            width: calc(100% - 24px);
+            height: calc(100% - 32px);
+            position: absolute;
+            top: 16px;
+            left: 12px;
+            border-radius: 24px;
+            background: black;
+            z-index: 1;
+            &:before {
+                background: #1e1e1e;
+                display: block;
+                content: '';
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                top: 2px;
+                left: 2px;
+                position: absolute;
+                border-radius: 22px;
+            }
+        }
+        .volume {
+            width: 3px;
+            position: absolute;
+            top: 130px;
+            height: 100px;
+            background: #1e1e1e;
+            right: -3px;
+            border-radius: 0px 2px 2px 0px;
+            &:before {
+                width: 3px;
+                position: absolute;
+                top: 190px;
+                content: '';
+                display: block;
+                height: 50px;
+                background: inherit;
+                right: 0px;
+                border-radius: 0px 2px 2px 0px;
+            }
+            &:after {
+                width: 3px;
+                position: absolute;
+                top: 460px;
+                content: '';
+                display: block;
+                height: 50px;
+                background: inherit;
+                right: 0px;
+                border-radius: 0px 2px 2px 0px;
+            }
+        }
+        .camera {
+            background: #3c3d3d;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 34px;
+            right: 130px;
+            z-index: 5;
+            border-radius: 5px;
+        }
+        .speaker {
+            background: #292728;
+            width: 64px;
+            height: 10px;
+            position: absolute;
+            top: 38px;
+            left: 50%;
+            margin-left: -32px;
+            border-radius: 5px;
+            z-index: 3;
+        }
+        &.landscape {
+            padding: 35px 80px 35px 125px;
+            height: 320px;
+            width: 568px;
+            border-radius: 2px / 100px;
+            .top-bar {
+                height: calc(100% - 24px);
+                width: calc(100% - 32px);
+                left: 16px;
+                top: 12px;
+            }
+            .volume {
+                height: 3px;
+                right: 130px;
+                width: 100px;
+                top: 100%;
+                border-radius: 0px 0px 2px 2px;
+                &:before {
+                    height: 3px;
+                    right: 190px;
+                    top: 0px;
+                    width: 50px;
+                    border-radius: 0px 0px 2px 2px;
+                }
+                &:after {
+                    height: 3px;
+                    right: 430px;
+                    top: 0px;
+                    width: 50px;
+                    border-radius: 0px 0px 2px 2px;
+                }
+            }
+            .camera {
+                right: 30px;
+                top: calc(100% - 140px);
+            }
+            .speaker {
+                width: 10px;
+                height: 64px;
+                top: 50%;
+                margin-left: 0;
+                margin-top: -32px;
+                left: calc(100% - 48px);
+            }
+        }
+        &.black {
+            background: black;
+        }
+        &.white {
+            background: white;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        }
+        &.blue {
+            background: #00acdd;
+        }
+        &.red {
+            background: #CC3E32;
+        }
+    }
+}
+.marvel-device {
+  display: inline-block;
+  position: relative;
+  box-sizing: content-box !important;
+  .screen {
+      width: 100%;
+      position: relative;
+      height: 100%;
+      z-index: 3;
+      background: white;
+      overflow: hidden;
+      display: block;
+      border-radius: 1px;
+      box-shadow: 0 0 0 3px #111;
+      .screen-content {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          bottom: 0px;
+          right: 0px;
+          overflow: auto;
+      }
+  }
+  .top-bar,
+  .bottom-bar {
+      height: 3px;
+      background: black;
+      width: 100%;
+      display: block;
+  }
+  .middle-bar {
+      width: 3px;
+      height: 4px;
+      top: 0px;
+      left: 90px;
+      background: black;
+      position: absolute;
+  }
+}

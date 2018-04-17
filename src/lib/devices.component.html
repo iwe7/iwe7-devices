@@ -1,0 +1,52 @@
+<ul>
+  <li (click)="_active(item)" [class.active]="activated === item.title" *ngFor="let item of list">{{item.title}}</li>
+</ul>
+<div class="marvel-container">
+  <div class="marvel-device">
+    <device-iphonex *ngIf="activated === 'iphonex'">
+      <ng-container *ngTemplateOutlet="screen"></ng-container>
+    </device-iphonex>
+    <device-ipad *ngIf="activated === 'ipad'">
+      <ng-container *ngTemplateOutlet="screen"></ng-container>
+    </device-ipad>
+    <device-macbook *ngIf="activated === 'macbook'">
+      <ng-container *ngTemplateOutlet="screen"></ng-container>
+    </device-macbook>
+    <device-htc-one *ngIf="activated === 'htc-one'">
+      <ng-container *ngTemplateOutlet="screen"></ng-container>
+    </device-htc-one>
+    <device-iphone4s *ngIf="activated === 'iphone4s'">
+      <ng-container *ngTemplateOutlet="screen"></ng-container>
+    </device-iphone4s>
+    <device-iphone5c *ngIf="activated === 'iphone5c'">
+      <ng-container *ngTemplateOutlet="screen"></ng-container>
+    </device-iphone5c>
+    <device-iphone5s *ngIf="activated === 'iphone5s'">
+      <ng-container *ngTemplateOutlet="screen"></ng-container>
+    </device-iphone5s>
+    <device-iphone8 *ngIf="activated === 'iphone8'">
+      <ng-container *ngTemplateOutlet="screen"></ng-container>
+    </device-iphone8>
+    <device-iphone8plus *ngIf="activated === 'iphone8plus'">
+      <ng-container *ngTemplateOutlet="screen"></ng-container>
+    </device-iphone8plus>
+    <device-lumia920 *ngIf="activated === 'lumia920'">
+      <ng-container *ngTemplateOutlet="screen"></ng-container>
+    </device-lumia920>
+    <device-nexus5 *ngIf="activated === 'nexus5'">
+      <ng-container *ngTemplateOutlet="screen"></ng-container>
+    </device-nexus5>
+    <device-note8 *ngIf="activated === 'note8'">
+      <ng-container *ngTemplateOutlet="screen"></ng-container>
+    </device-note8>
+    <device-s5 *ngIf="activated === 's5'">
+      <ng-container *ngTemplateOutlet="screen"></ng-container>
+    </device-s5>
+
+  </div>
+</div>
+
+<ng-template #screen>
+  i am a content
+  <ng-content></ng-content>
+</ng-template>

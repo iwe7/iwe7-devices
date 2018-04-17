@@ -1,0 +1,256 @@
+.marvel-device {
+    &.iphone4s {
+        padding: 129px 27px;
+        width: 320px;
+        height: 480px;
+        background: #686868;
+        border-radius: 54px;
+        &:before {
+            content: '';
+            width: calc(100% - 8px);
+            height: calc(100% - 8px);
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            z-index: 1;
+            border-radius: 50px;
+            background: #1e1e1e;
+        }
+        .top-bar {
+            top: 60px;
+            position: absolute;
+            left: 0;
+        }
+        .bottom-bar {
+            bottom: 90px;
+            position: absolute;
+            left: 0;
+        }
+        .camera {
+            background: #3c3d3d;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 72px;
+            left: 134px;
+            z-index: 3;
+            margin-left: -5px;
+            border-radius: 100%;
+        }
+        .speaker {
+            background: #292728;
+            width: 64px;
+            height: 10px;
+            position: absolute;
+            top: 72px;
+            left: 50%;
+            z-index: 3;
+            margin-left: -32px;
+            border-radius: 5px;
+        }
+        .sensor {
+            background: #292728;
+            width: 40px;
+            height: 10px;
+            position: absolute;
+            top: 36px;
+            left: 50%;
+            z-index: 3;
+            margin-left: -20px;
+            border-radius: 5px;
+        }
+        .home {
+            background: #242324;
+            border-radius: 100%;
+            width: 72px;
+            height: 72px;
+            z-index: 3;
+            position: absolute;
+            left: 50%;
+            margin-left: -36px;
+            bottom: 30px;
+            &:after {
+                width: 20px;
+                height: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 4px;
+                position: absolute;
+                display: block;
+                content: '';
+                top: 50%;
+                left: 50%;
+                margin-top: -11px;
+                margin-left: -11px;
+            }
+        }
+        .sleep {
+            position: absolute;
+            top: -4px;
+            right: 60px;
+            width: 60px;
+            height: 4px;
+            border-radius: 2px 2px 0px 0px;
+            background: #4D4D4D;
+        }
+        .volume {
+            position: absolute;
+            left: -4px;
+            top: 160px;
+            height: 27px;
+            width: 4px;
+            border-radius: 2px 0px 0px 2px;
+            background: #4D4D4D;
+            &:before {
+                position: absolute;
+                left: 0px;
+                top: -70px;
+                height: 35px;
+                width: 4px;
+                border-radius: 2px 0px 0px 2px;
+                background: inherit;
+                content: '';
+                display: block;
+            }
+            &:after {
+                position: absolute;
+                left: 0px;
+                bottom: -64px;
+                height: 27px;
+                width: 4px;
+                border-radius: 2px 0px 0px 2px;
+                background: inherit;
+                content: '';
+                display: block;
+            }
+        }
+        &.landscape {
+            padding: 27px 129px;
+            height: 320px;
+            width: 480px;
+            .bottom-bar {
+                left: 90px;
+                bottom: 0px;
+                height: 100%;
+                width: 3px;
+            }
+            .top-bar {
+                left: calc(100% - 60px);
+                top: 0px;
+                height: 100%;
+                width: 3px;
+            }
+            .camera {
+                top: 134px;
+                left: calc(100% - 72px);
+                margin-left: 0;
+            }
+            .speaker {
+                top: 50%;
+                margin-left: 0;
+                margin-top: -32px;
+                left: calc(100% - 72px);
+                width: 10px;
+                height: 64px;
+            }
+            .sensor {
+                height: 40px;
+                width: 10px;
+                left: calc(100% - 36px);
+                top: 50%;
+                margin-left: 0;
+                margin-top: -20px;
+            }
+            .home {
+                left: 30px;
+                bottom: 50%;
+                margin-left: 0;
+                margin-bottom: -36px;
+            }
+            .sleep {
+                height: 60px;
+                width: 4px;
+                right: -4px;
+                top: calc(100% - 120px);
+                border-radius: 0px 2px 2px 0px;
+            }
+            .volume {
+                top: -4px;
+                left: calc(100% - 187px);
+                height: 4px;
+                width: 27px;
+                border-radius: 2px 2px 0px 0px;
+                &:before {
+                    right: -70px;
+                    left: auto;
+                    top: 0px;
+                    width: 35px;
+                    height: 4px;
+                    border-radius: 2px 2px 0px 0px;
+                }
+                &:after {
+                    width: 27px;
+                    height: 4px;
+                    bottom: 0px;
+                    left: -64px;
+                    border-radius: 2px 2px 0px 0px;
+                }
+            }
+        }
+        &.silver {
+            background: #bcbcbc;
+            &:before {
+                background: #fcfcfc;
+            }
+            .home {
+                background: #fcfcfc;
+                box-shadow: inset 0 0 0 1px #bcbcbc;
+                &:after {
+                    border: 1px solid rgba(0, 0, 0, 0.2);
+                }
+            }
+            .volume,
+            .sleep {
+                background: #d6d6d6;
+            }
+        }
+    }
+}
+.marvel-device {
+  display: inline-block;
+  position: relative;
+  box-sizing: content-box !important;
+  .screen {
+      width: 100%;
+      position: relative;
+      height: 100%;
+      z-index: 3;
+      background: white;
+      overflow: hidden;
+      display: block;
+      border-radius: 1px;
+      box-shadow: 0 0 0 3px #111;
+      .screen-content {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          bottom: 0px;
+          right: 0px;
+          overflow: auto;
+      }
+  }
+  .top-bar,
+  .bottom-bar {
+      height: 3px;
+      background: black;
+      width: 100%;
+      display: block;
+  }
+  .middle-bar {
+      width: 3px;
+      height: 4px;
+      top: 0px;
+      left: 90px;
+      background: black;
+      position: absolute;
+  }
+}
